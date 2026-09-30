@@ -43,6 +43,11 @@ nav.top .wrap{display:flex;align-items:center;gap:1rem;height:56px}
 @media (max-width:760px){.brand{display:none}}
 
 /* Hero */
+.herogrid{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2rem;align-items:center}
+.photo{width:clamp(150px,22vw,240px);aspect-ratio:1/1;object-fit:cover;border-radius:50%;border:4px solid var(--bar);box-shadow:0 0 0 8px color-mix(in srgb,var(--bar) 25%,transparent);background:var(--sheet)}
+.navphoto{width:30px;height:30px;border-radius:50%;object-fit:cover;border:2px solid var(--bar);margin-right:.5rem;vertical-align:middle}
+@media (max-width:760px){.herogrid{grid-template-columns:1fr}.photo{order:-1;width:140px}}
+
 header.hero{padding:clamp(3rem,9vw,6rem) 0 2.5rem}
 .hi{font-family:var(--head);font-size:1.05rem;color:var(--steel);margin:0 0 .5rem}
 h1{font-family:var(--head);font-variation-settings:"wdth" 70;font-weight:800;font-size:clamp(2.6rem,8vw,5rem);line-height:.95;letter-spacing:-.01em;margin:0 0 1rem}
@@ -144,7 +149,7 @@ footer{padding:2rem 0 3rem;font-family:var(--head);font-size:.85rem;color:var(--
 <body>
 <nav class="top" aria-label="Sections">
   <div class="wrap">
-    <a class="brand" href="#top">Likith N. B.</a>
+    <a class="brand" href="#top"><img class="navphoto" src="profile.jpg" alt="" width="30" height="30" onerror="this.remove()">Likith N. B.</a>
     <div class="links">
       <a href="#about">About</a><a href="#timeline">Timeline</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a>
     </div>
@@ -154,6 +159,8 @@ footer{padding:2rem 0 3rem;font-family:var(--head);font-size:.85rem;color:var(--
 
 <div class="wrap" id="top">
 <header class="hero">
+  <div class="herogrid">
+  <div>
   <p class="hi">Hi, I'm</p>
   <h1>Likith Nayakanahalli Ballegowda</h1>
   <p class="role" aria-live="polite"><span class="typed" id="typed">Project Manager</span></p>
@@ -164,6 +171,9 @@ footer{padding:2rem 0 3rem;font-family:var(--head);font-size:.85rem;color:var(--
     <a class="btn" href="http://www.linkedin.com/in/likithnb05072002" target="_blank" rel="noopener">LinkedIn</a>
   </div>
   <p class="dlnote" id="dlnote"></p>
+  </div>
+  <img class="photo" src="profile.jpg" alt="Photo of Likith Nayakanahalli Ballegowda" width="240" height="240" onerror="this.remove()">
+  </div>
 </header>
 
 <main>
