@@ -7,129 +7,138 @@
 <meta name="description" content="Portfolio of Likith Nayakanahalli Ballegowda, MS in Project Management at Northeastern University.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 :root{
-  --paper:#EEF2F4; --sheet:#FFFFFF; --ink:#16324F; --steel:#5B7083; --rule:#C9D3DB;
-  --bar:#F2C14E; --bar2:#2F7F7A; --navbg:rgba(238,242,244,.9);
-  --head:"Archivo","Helvetica Neue",Arial,sans-serif;
-  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --paper:#F1EFEB; --sheet:#F6F6F6; --ink:#2F2B28; --steel:#6E6760; --rule:#DDD5D5;
+  --bar:#D3DCE8; --bar2:#E8E1D5; --edge:#9FB0C6; --edge2:#B9AE9E; --accent:#55677F; --onbar:#2F2B28; --navbg:rgba(241,239,235,.92);
+  --head:"Times New Roman",Tinos,Times,serif;
+  --body:"Times New Roman",Tinos,Times,serif;
   box-sizing:border-box;
   padding-top:env(safe-area-inset-top,0px);
   padding-bottom:env(safe-area-inset-bottom,0px);
 }
 @media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){--paper:#0F1B27;--sheet:#152433;--ink:#E4ECF2;--steel:#9FB2C2;--rule:#2A3D50;--bar:#E8B84A;--bar2:#4FA8A1;--navbg:rgba(15,27,39,.9)}
+  :root:not([data-theme="light"]){--paper:#26231F;--sheet:#2F2B27;--ink:#F1EFEB;--steel:#BDB5AC;--rule:#3D3833;--bar:#8FA1B8;--bar2:#B8A9A0;--edge:#8FA1B8;--edge2:#B8A9A0;--accent:#AFC0D6;--onbar:#1F1C19;--navbg:rgba(38,35,31,.92)}
 }
-:root[data-theme="dark"]{--paper:#0F1B27;--sheet:#152433;--ink:#E4ECF2;--steel:#9FB2C2;--rule:#2A3D50;--bar:#E8B84A;--bar2:#4FA8A1;--navbg:rgba(15,27,39,.9)}
+:root[data-theme="dark"]{--paper:#26231F;--sheet:#2F2B27;--ink:#F1EFEB;--steel:#BDB5AC;--rule:#3D3833;--bar:#8FA1B8;--bar2:#B8A9A0;--edge:#8FA1B8;--edge2:#B8A9A0;--accent:#AFC0D6;--onbar:#1F1C19;--navbg:rgba(38,35,31,.92)}
 *,*::before,*::after{box-sizing:inherit}
 html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.65;
-  background-image:linear-gradient(color-mix(in srgb,var(--rule) 60%,transparent) 1px,transparent 1px),linear-gradient(90deg,color-mix(in srgb,var(--rule) 60%,transparent) 1px,transparent 1px);
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:1.1875rem;line-height:1.65;
+  background-image:linear-gradient(color-mix(in srgb,var(--rule) 35%,transparent) 1px,transparent 1px),linear-gradient(90deg,color-mix(in srgb,var(--rule) 35%,transparent) 1px,transparent 1px);
   background-size:32px 32px;background-attachment:fixed}
 a{color:inherit}
-a:focus-visible,button:focus-visible{outline:3px solid var(--bar);outline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 .wrap{max-width:1080px;margin:0 auto;padding:0 clamp(1rem,4vw,2.5rem)}
 
 /* Sticky navigation */
 nav.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--navbg);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
 nav.top .wrap{display:flex;align-items:center;gap:1rem;height:56px}
-.brand{font-family:var(--head);font-variation-settings:"wdth" 75;font-weight:800;font-size:1.15rem;text-decoration:none;margin-right:auto;white-space:nowrap}
+.brand{font-family:var(--head);font-weight:800;font-size:1.15rem;text-decoration:none;margin-right:auto;white-space:nowrap}
 .links{display:flex;gap:.25rem;overflow-x:auto;scrollbar-width:none;font-family:var(--head);font-size:.9rem}
 .links::-webkit-scrollbar{display:none}
 .links a{text-decoration:none;padding:.35rem .6rem;border-radius:3px;white-space:nowrap;color:var(--steel)}
-.links a.on{color:var(--ink);background:color-mix(in srgb,var(--bar) 35%,transparent)}
+.links a.on{color:var(--ink);background:var(--bar2)}
 .theme{border:1px solid var(--rule);background:var(--sheet);color:var(--ink);border-radius:3px;padding:.3rem .55rem;font-family:var(--head);font-size:.85rem;cursor:pointer}
 @media (max-width:760px){.brand{display:none}}
 
 /* Hero */
 .herogrid{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2rem;align-items:center}
-.photo{width:clamp(150px,22vw,240px);aspect-ratio:1/1;object-fit:cover;border-radius:50%;border:4px solid var(--bar);box-shadow:0 0 0 8px color-mix(in srgb,var(--bar) 25%,transparent);background:var(--sheet)}
-.navphoto{width:30px;height:30px;border-radius:50%;object-fit:cover;border:2px solid var(--bar);margin-right:.5rem;vertical-align:middle}
+.photo{width:clamp(150px,22vw,240px);aspect-ratio:1/1;object-fit:cover;border-radius:50%;border:4px solid var(--sheet);box-shadow:0 0 0 8px var(--bar2);background:var(--sheet)}
+.navphoto{width:30px;height:30px;border-radius:50%;object-fit:cover;border:2px solid var(--bar2);margin-right:.5rem;vertical-align:middle}
 @media (max-width:760px){.herogrid{grid-template-columns:1fr}.photo{order:-1;width:140px}}
 
 header.hero{padding:clamp(3rem,9vw,6rem) 0 2.5rem}
 .hi{font-family:var(--head);font-size:1.05rem;color:var(--steel);margin:0 0 .5rem}
-h1{font-family:var(--head);font-variation-settings:"wdth" 70;font-weight:800;font-size:clamp(2.6rem,8vw,5rem);line-height:.95;letter-spacing:-.01em;margin:0 0 1rem}
-.role{font-family:var(--head);font-variation-settings:"wdth" 85;font-weight:700;font-size:clamp(1.3rem,3.2vw,1.9rem);margin:0 0 1.25rem;min-height:1.4em}
-.role .typed{border-right:3px solid var(--bar);padding-right:.15rem}
-.lede{font-size:clamp(1.05rem,2vw,1.2rem);max-width:60ch;margin:0 0 1.75rem}
+h1{font-family:var(--head);font-weight:700;font-size:clamp(2.5rem,7.5vw,4.6rem);line-height:1.02;letter-spacing:0;margin:0 0 1rem}
+.role{font-family:var(--head);font-weight:700;font-size:clamp(1.3rem,3.2vw,1.9rem);margin:0 0 1.25rem;min-height:1.4em}
+.role .typed{border-right:3px solid var(--edge);padding-right:.15rem}
+.lede{font-size:clamp(1.175rem,2vw,1.325rem);max-width:60ch;margin:0 0 1.75rem}
 .cta{display:flex;flex-wrap:wrap;gap:.75rem}
-.btn{font-family:var(--head);font-weight:700;font-size:.95rem;text-decoration:none;padding:.65rem 1.1rem;border-radius:3px;border:2px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
-.btn.primary{background:var(--bar);border-color:var(--bar);color:#16324F}
+.btn{font-family:var(--head);font-weight:700;font-size:.95rem;text-decoration:none;padding:.65rem 1.1rem;border-radius:3px;border:2px solid var(--edge2);background:transparent;color:var(--ink);cursor:pointer}
+.btn.primary{background:var(--bar);border-color:var(--edge);color:var(--onbar)}
 .btn:hover{transform:translateY(-1px)}
 .dlnote{font-family:var(--head);font-size:.85rem;color:var(--steel);margin:.6rem 0 0;min-height:1.2em}
 
 /* Section scaffolding */
-section.block{padding:3rem 0;border-top:2px solid var(--ink)}
-section.block > h2{font-family:var(--head);font-variation-settings:"wdth" 80;font-weight:800;font-size:clamp(1.7rem,4vw,2.4rem);margin:0 0 1.5rem;line-height:1}
+section.block{padding:3rem 0;border-top:1px solid var(--edge2)}
+section.block > h2{font-family:var(--head);font-weight:800;font-size:clamp(1.7rem,4vw,2.4rem);margin:0 0 1.5rem;line-height:1}
 .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
 .reveal.in{opacity:1;transform:none}
 
 /* About + stats */
 .about{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:2.5rem}
 .about p{margin:0 0 1rem;max-width:62ch}
-.stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.stat{background:var(--sheet);border:1px solid var(--rule);padding:1rem}
-.stat b{display:block;font-family:var(--head);font-variation-settings:"wdth" 72;font-weight:800;font-size:2.2rem;line-height:1}
-.stat span{font-family:var(--head);font-size:.85rem;color:var(--steel)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-content:start}
+.stat{background:var(--sheet);border:1px solid var(--rule);border-left:4px solid var(--edge);padding:1rem}
+.stat b{display:block;font-family:var(--head);font-weight:800;font-size:2.2rem;line-height:1}
+.stat span{display:block;font-family:var(--head);font-size:.95rem;line-height:1.35;margin-top:.4rem;color:var(--steel)}
 
+.stat{min-height:118px;display:flex;align-items:center}
+.statin{transition:opacity .45s ease,transform .45s ease}
+.statin.out{opacity:0;transform:translateY(6px)}
 /* Timeline */
 .plan{background:var(--sheet);border:1px solid var(--rule);padding:1.25rem 1.25rem 1rem}
-.plan p{margin:0 0 1rem;color:var(--steel);font-size:.95rem}
+.plan p{margin:0 0 1rem;color:var(--steel);font-size:1.075rem}
 .gantt-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
 .gantt{min-width:760px;display:grid;grid-template-columns:190px repeat(48,1fr);row-gap:.45rem;font-family:var(--head);font-size:.85rem}
-.yr{grid-row:1;font-variation-settings:"wdth" 85;font-weight:700;color:var(--steel);border-left:1px solid var(--rule);padding-left:.35rem;padding-bottom:.35rem}
-.lbl{grid-column:1;align-self:center;padding-right:.75rem;font-variation-settings:"wdth" 85;line-height:1.2}
+.yr{grid-row:1;font-weight:700;color:var(--steel);border-left:1px solid var(--rule);padding-left:.35rem;padding-bottom:.35rem}
+.lbl{grid-column:1;align-self:center;padding-right:.75rem;line-height:1.2}
 .lbl small{display:block;color:var(--steel)}
-.bar{align-self:center;height:26px;background:var(--bar);color:var(--ink);text-decoration:none;position:relative;border-radius:3px;font-weight:600;font-size:.8rem;transform-origin:left center}
+.bar{align-self:center;height:26px;background:var(--bar);border:1px solid var(--edge);color:var(--ink);text-decoration:none;position:relative;border-radius:3px;font-weight:600;font-size:.8rem;transform-origin:left center}
 .bar span{position:absolute;left:calc(100% + .5rem);top:50%;transform:translateY(-50%);white-space:nowrap}
 .bar.left span{left:auto;right:calc(100% + .5rem)}
-.bar.alt{background:var(--bar2)}
+.bar.alt{background:var(--bar2);border-color:var(--edge2)}
 .bar:hover span{text-decoration:underline}
 .plan.in .bar{animation:grow .7s ease both}
 .plan.in .bar:nth-of-type(2){animation-delay:.05s}
 @keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 .legend{display:flex;gap:1.25rem;margin-top:.9rem;font-family:var(--head);font-size:.8rem;color:var(--steel)}
-.legend span::before{content:"";display:inline-block;width:14px;height:10px;margin-right:.4rem;vertical-align:middle;border-radius:2px;background:var(--bar)}
-.legend span.p::before{background:var(--bar2)}
+.legend span::before{content:"";display:inline-block;width:14px;height:10px;margin-right:.4rem;vertical-align:middle;border-radius:2px;background:var(--bar);border:1px solid var(--edge)}
+.legend span.p::before{background:var(--bar2);border-color:var(--edge2)}
 
+.tip{position:fixed;z-index:20;max-width:320px;background:var(--ink);color:var(--paper);padding:.6rem .75rem;border-radius:4px;font-family:var(--head);font-size:.9rem;line-height:1.35;pointer-events:none;opacity:0;transform:translateY(4px);transition:opacity .15s,transform .15s;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.tip.show{opacity:1;transform:none}
+.tip b{display:block;font-size:.95rem;margin-bottom:.15rem}
+.tip .d{display:block;opacity:.8;font-size:.82rem;margin-bottom:.35rem}
+.tip .ds{display:block;margin-bottom:.4rem}
+.tip .hl{display:block;font-weight:700;padding-top:.35rem;border-top:1px solid color-mix(in srgb,var(--paper) 30%,transparent)}
 /* Experience cards */
 .job{display:grid;grid-template-columns:minmax(0,240px) minmax(0,1fr);gap:.5rem 2rem;padding:1.5rem 0;border-bottom:1px solid var(--rule)}
 .job:last-child{border-bottom:0}
-.job h3{font-family:var(--head);font-variation-settings:"wdth" 80;font-weight:800;font-size:1.35rem;line-height:1.1;margin:0 0 .35rem}
+.job h3{font-family:var(--head);font-weight:800;font-size:1.35rem;line-height:1.1;margin:0 0 .35rem}
 .job .m{font-family:var(--head);font-size:.9rem;color:var(--steel);line-height:1.45;margin:0}
 .job .m strong{color:var(--ink);font-weight:600}
 .job ul{margin:0;padding-left:1.1rem;max-width:66ch}
 .job li{margin:.2rem 0}
 .more{display:none}
 .job.open .more{display:list-item}
-.toggle{margin-top:.6rem;font-family:var(--head);font-size:.85rem;font-weight:600;background:none;border:0;color:var(--bar2);cursor:pointer;padding:0;text-decoration:underline}
+.toggle{margin-top:.6rem;font-family:var(--head);font-size:.85rem;font-weight:600;background:none;border:0;color:var(--accent);cursor:pointer;padding:0;text-decoration:underline}
 
 /* Project cards */
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem}
-.card{background:var(--sheet);border:1px solid var(--rule);border-top:4px solid var(--bar);padding:1.25rem;display:flex;flex-direction:column}
-.card.alt{border-top-color:var(--bar2)}
-.card h3{font-family:var(--head);font-variation-settings:"wdth" 82;font-weight:800;font-size:1.2rem;margin:0 0 .25rem;line-height:1.15}
+.card{background:var(--sheet);border:1px solid var(--rule);border-top:4px solid var(--edge);padding:1.25rem;display:flex;flex-direction:column}
+.card.alt{border-top-color:var(--edge2)}
+.card h3{font-family:var(--head);font-weight:800;font-size:1.2rem;margin:0 0 .25rem;line-height:1.15}
 .card .m{font-family:var(--head);font-size:.85rem;color:var(--steel);margin:0 0 .75rem}
-.card p{margin:0 0 .75rem;font-size:1rem}
+.card p{margin:0 0 .75rem;font-size:1.125rem}
 .card .figs{margin-top:auto;display:flex;gap:1.25rem;flex-wrap:wrap;padding-top:.75rem;border-top:1px solid var(--rule)}
 .figs div{font-family:var(--head);font-size:.8rem;color:var(--steel);line-height:1.2}
-.figs b{display:block;font-variation-settings:"wdth" 75;font-weight:800;font-size:1.5rem;color:var(--ink)}
+.figs b{display:block;font-weight:800;font-size:1.5rem;color:var(--ink)}
 
 /* Skills */
 .skillgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.5rem}
-.skillgrid h3{font-family:var(--head);font-variation-settings:"wdth" 88;font-weight:700;font-size:1rem;margin:0 0 .6rem}
+.skillgrid h3{font-family:var(--head);font-weight:700;font-size:1rem;margin:0 0 .6rem}
 .chips{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;margin:0;padding:0}
 .chips li{font-family:var(--head);font-size:.85rem;border:1px solid var(--rule);background:var(--sheet);padding:.25rem .6rem;border-radius:3px}
 
 /* Education */
 .edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1rem}
-.edu .card{border-top-color:var(--ink)}
+.edu .card{border-top-color:var(--steel)}
 
 /* Contact */
 .contact{display:flex;flex-wrap:wrap;gap:1rem 2rem;font-family:var(--head);font-size:1.05rem}
-.contact a{text-decoration:none;border-bottom:2px solid var(--bar)}
+.contact a{text-decoration:none;border-bottom:2px solid var(--edge)}
 footer{padding:2rem 0 3rem;font-family:var(--head);font-size:.85rem;color:var(--steel)}
 .totop{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--paper);border:0;border-radius:3px;padding:.5rem .75rem;font-family:var(--head);font-size:.85rem;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s}
 .totop.show{opacity:1;pointer-events:auto}
@@ -164,7 +173,7 @@ footer{padding:2rem 0 3rem;font-family:var(--head);font-size:.85rem;color:var(--
   <p class="hi">Hi, I'm</p>
   <h1>Likith Nayakanahalli Ballegowda</h1>
   <p class="role" aria-live="polite"><span class="typed" id="typed">Project Manager</span></p>
-  <p class="lede">I'm completing an MS in Project Management at Northeastern University, and I turn messy, manual operations into systems teams can rely on. My experience spans retail operations, real estate development, government programs, and IT.</p>
+  <p class="lede">I'm completing my MS in Project Management at Northeastern University, and I turn messy, manual operations into systems teams can rely on. My experience spans retail operations, real estate development, government programs, and IT.</p>
   <div class="cta">
     <button class="btn primary" id="resumeBtn" type="button">Download resume</button>
     <a class="btn" href="#contact">Get in touch</a>
@@ -186,10 +195,10 @@ footer{padding:2rem 0 3rem;font-family:var(--head);font-size:.85rem;color:var(--
       <p>I'm looking for full-time roles as a Project Manager, Project Coordinator, or Assistant Project Manager, starting in early 2027, and I'm open to relocating.</p>
     </div>
     <div class="stats">
-      <div class="stat"><b data-count="4">4</b><span>internships</span></div>
-      <div class="stat"><b data-count="1.44" data-prefix="$" data-suffix="M">$1.44M</b><span>government program tracked</span></div>
-      <div class="stat"><b data-count="6">6</b><span>business functions coordinated</span></div>
-      <div class="stat"><b data-count="15000" data-suffix="">15,000</b><span>festival attendees</span></div>
+      <div class="stat" data-items='[["4", "internships in the U.S. and India"], ["$1.44M", "government program tracked"], ["Dec 2026", "MS graduation"]]'><div class="statin"><b>4</b><span>internships in the U.S. and India</span></div></div>
+      <div class="stat" data-items='[["3.6", "GPA, MS in Project Management"], ["10", "project risks identified early"], ["2", "degrees: Engineering and Project Management"]]'><div class="statin"><b>3.6</b><span>GPA, MS in Project Management</span></div></div>
+      <div class="stat" data-items='[["3", "industries: retail, real estate, and government"], ["3", "residential developments coordinated"], ["25+", "material orders managed each month"]]'><div class="statin"><b>3</b><span>industries: retail, real estate, and government</span></div></div>
+      <div class="stat" data-items='[["6", "business functions coordinated"], ["10%", "faster review cycles"], ["15,000", "festival attendees"]]'><div class="statin"><b>6</b><span>business functions coordinated</span></div></div>
     </div>
   </div>
 </section>
@@ -197,7 +206,7 @@ footer{padding:2rem 0 3rem;font-family:var(--head);font-size:.85rem;color:var(--
 <section class="block" id="timeline">
   <h2 class="reveal">Timeline</h2>
   <div class="plan reveal" id="plan">
-    <p>My work laid out as a project schedule. Select a bar to jump to the details.</p>
+    <p>My work laid out as a project schedule. Hover over a bar for a quick summary, or select it to jump to the details.</p>
     <div class="gantt-scroll">
       <div class="gantt">
         <div class="yr" style="grid-column:2 / span 12">2023</div>
@@ -205,17 +214,17 @@ footer{padding:2rem 0 3rem;font-family:var(--head);font-size:.85rem;color:var(--
         <div class="yr" style="grid-column:26 / span 12">2025</div>
         <div class="yr" style="grid-column:38 / span 12">2026</div>
         <div class="lbl" style="grid-row:2">Unosis IT Solutions<small>Data Analyst Intern</small></div>
-        <a class="bar" href="#exp-unosis" style="grid-row:2;grid-column:4 / span 3"><span>Agile QA</span></a>
+        <a class="bar" href="#exp-unosis" data-role="Data Analyst Intern, Unosis IT Solutions" data-dates="Mar – May 2023" data-desc="Validated data and test results for an Agile software team before deployment." data-hl="6 Agile sprints, 6-member team" style="grid-row:2;grid-column:4 / span 3"><span>Mar – May 2023</span></a>
         <div class="lbl" style="grid-row:3">KSRSAC<small>Project Analyst Intern</small></div>
-        <a class="bar" href="#exp-ksrsac" style="grid-row:3;grid-column:7 / span 6"><span>$1.44M program</span></a>
+        <a class="bar" href="#exp-ksrsac" data-role="Project Analyst Intern, KSRSAC" data-dates="Jun – Nov 2023" data-desc="Tracked progress, reporting, and risks for a state government remote sensing program." data-hl="$1.44M program, 8 deliverables" style="grid-row:3;grid-column:7 / span 6"><span>Jun – Nov 2023</span></a>
         <div class="lbl" style="grid-row:4">Jayciana 2023<small>Student council</small></div>
-        <a class="bar alt" href="#proj-jayciana" style="grid-row:4;grid-column:8 / span 1" aria-label="Jayciana 2023, July 2023"><span>15,000-attendee festival</span></a>
+        <a class="bar alt" href="#proj-jayciana" data-role="Academic Secretary, Jayciana 2023" data-dates="Jul 2023" data-desc="Planned and ran the university&#x27;s annual cultural festival as Academic Secretary on the organizing student council." data-hl="15,000 attendees, 2-day festival" style="grid-row:4;grid-column:8 / span 1" aria-label="Jayciana 2023, July 2023"><span>Jul 2023</span></a>
         <div class="lbl" style="grid-row:5">IIT Hyderabad<small>Research project</small></div>
-        <a class="bar alt" href="#proj-iit" style="grid-row:5;grid-column:10 / span 10"><span>Motion-capture data</span></a>
+        <a class="bar alt" href="#proj-iit" data-role="Research project, IIT Hyderabad" data-dates="Sep 2023 – Jun 2024" data-desc="Analyzed motion-capture data to benchmark AI pose-estimation models for movement research." data-hl="17 subjects, 23 activities" style="grid-row:5;grid-column:10 / span 10"><span>Sep 2023 – Jun 2024</span></a>
         <div class="lbl" style="grid-row:6">MMR Universal Ventures<small>Project Coordination Intern</small></div>
-        <a class="bar" href="#exp-mmr" style="grid-row:6;grid-column:14 / span 6"><span>3 plotted developments</span></a>
+        <a class="bar" href="#exp-mmr" data-role="Project Coordination Intern, MMR Universal Ventures" data-dates="Jan – Jun 2024" data-desc="Organized material orders, schedules, and contractor coordination across three plotted residential developments." data-hl="25+ material orders a month, 5+ contractors and vendors" style="grid-row:6;grid-column:14 / span 6"><span>Jan – Jun 2024</span></a>
         <div class="lbl" style="grid-row:7">Svenfresh<small>Project Management Intern</small></div>
-        <a class="bar left" href="#exp-svenfresh" style="grid-row:7;grid-column:38 / span 6"><span>Co-op, 6 functions</span></a>
+        <a class="bar left" href="#exp-svenfresh" data-role="Project Management Intern, Svenfresh" data-dates="Jan – Jun 2026" data-desc="Coordinated process and tool projects across purchasing, delivery, and farmers market operations for an omnichannel seafood retailer." data-hl="6 business functions, 2 years of sales data" style="grid-row:7;grid-column:38 / span 6"><span>Jan – Jun 2026</span></a>
       </div>
     </div>
     <div class="legend"><span>Work and internships</span><span class="p">Projects</span></div>
@@ -330,11 +339,11 @@ footer{padding:2rem 0 3rem;font-family:var(--head);font-size:.85rem;color:var(--
 
 <section class="block reveal" id="contact">
   <h2>Contact</h2>
-  <p style="max-width:60ch;margin:0 0 1.25rem">I'm open to full-time project management roles starting in early 2027. The fastest way to reach me is email.</p>
+  <p style="max-width:60ch;margin:0 0 1.25rem">I'm open to full-time project management roles starting in early 2027. The fastest way to reach me is by email.</p>
   <div class="contact">
     <a href="mailto:likithnb05@gmail.com">likithnb05@gmail.com</a>
+    <a href="tel:+18574219163" aria-label="Call Likith">Phone</a>
     <a href="http://www.linkedin.com/in/likithnb05072002" target="_blank" rel="noopener">LinkedIn profile</a>
-    <span>Boston, MA</span>
   </div>
 </section>
 </main>
@@ -342,6 +351,7 @@ footer{padding:2rem 0 3rem;font-family:var(--head);font-size:.85rem;color:var(--
 <footer>Built by Likith Nayakanahalli Ballegowda, 2026.</footer>
 </div>
 <button class="totop" id="totop" type="button">Back to top</button>
+<div class="tip" id="tip" role="tooltip"></div>
 
 <script>
 (function(){
@@ -357,7 +367,7 @@ footer{padding:2rem 0 3rem;font-family:var(--head);font-size:.85rem;color:var(--
   btn.addEventListener('click', function(){ var next = isDark() ? 'light' : 'dark'; root.setAttribute('data-theme', next); try{localStorage.setItem('theme', next);}catch(e){} label(); });
 
   // Typing effect for target roles
-  var roles = ['Project Manager','Project Coordinator','Assistant Project Manager','Operations and Process Improvement'];
+  var roles = ['Project Manager','Project Coordinator','Assistant Project Manager','Associate Project Manager','Project Analyst','Operations Analyst','Business Analyst'];
   var el = document.getElementById('typed');
   if(!reduce){
     var r=0, i=roles[0].length, del=true;
@@ -383,6 +393,23 @@ footer{padding:2rem 0 3rem;font-family:var(--head);font-size:.85rem;color:var(--
     items.forEach(function(x){ io.observe(x); });
   } else { items.forEach(function(x){ x.classList.add('in'); }); }
 
+
+  // Rotating About stats
+  var statEls=document.querySelectorAll('.stat[data-items]');
+  if(!reduce){
+    statEls.forEach(function(el,idx){
+      var items=JSON.parse(el.dataset.items), k=0, inner=el.querySelector('.statin'), paused=false;
+      el.addEventListener('mouseenter',function(){paused=true;}); el.addEventListener('mouseleave',function(){paused=false;});
+      setTimeout(function(){
+        setInterval(function(){
+          if(paused||document.hidden) return;
+          k=(k+1)%items.length; inner.classList.add('out');
+          setTimeout(function(){ inner.querySelector('b').textContent=items[k][0]; inner.querySelector('span').textContent=items[k][1]; inner.classList.remove('out'); },450);
+        },4200);
+      },3000+idx*700);
+    });
+  }
+
   // Active nav link
   var links = document.querySelectorAll('.links a');
   var secs = Array.prototype.map.call(links, function(a){ return document.querySelector(a.getAttribute('href')); });
@@ -394,6 +421,29 @@ footer{padding:2rem 0 3rem;font-family:var(--head);font-size:.85rem;color:var(--
   }
   window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
   document.getElementById('totop').addEventListener('click', function(){ window.scrollTo({top:0, behavior: reduce?'auto':'smooth'}); });
+
+
+  // Timeline hover popup
+  var tip=document.getElementById('tip');
+  function showTip(b){
+    tip.innerHTML='';
+    var r=document.createElement('b'); r.textContent=b.dataset.role;
+    var d=document.createElement('span'); d.className='d'; d.textContent=b.dataset.dates;
+    var ds=document.createElement('span'); ds.className='ds'; ds.textContent=b.dataset.desc||'';
+    var h=document.createElement('span'); h.className='hl'; h.textContent=b.dataset.hl;
+    tip.appendChild(r); tip.appendChild(d); tip.appendChild(ds); tip.appendChild(h);
+    tip.classList.add('show');
+    var br=b.getBoundingClientRect(), tr=tip.getBoundingClientRect();
+    var top=br.top-tr.height-10; if(top<64) top=br.bottom+10;
+    var left=Math.min(Math.max(8,br.left+br.width/2-tr.width/2),window.innerWidth-tr.width-8);
+    tip.style.top=top+'px'; tip.style.left=left+'px';
+  }
+  function hideTip(){ tip.classList.remove('show'); }
+  document.querySelectorAll('.bar[data-role]').forEach(function(b){
+    b.addEventListener('mouseenter',function(){showTip(b);}); b.addEventListener('mouseleave',hideTip);
+    b.addEventListener('focus',function(){showTip(b);}); b.addEventListener('blur',hideTip);
+  });
+  window.addEventListener('scroll',hideTip,{passive:true});
 
   // Show more / less on experience
   document.querySelectorAll('.toggle').forEach(function(t){
